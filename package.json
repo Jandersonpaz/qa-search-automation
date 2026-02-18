@@ -1,0 +1,9 @@
+{
+  "name": "mini-site-js",
+  "version": "1.0.0",
+  "scripts": {},
+  "devDependencies": {
+    "codeceptjs": "^3.5.0",
+    "playwright": "^1.40.0"
+  }
+}
