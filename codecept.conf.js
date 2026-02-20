@@ -1,16 +1,22 @@
 exports.config = {
 
   tests: './features/*.feature',
-
   output: './_output',
 
   helpers: {
     Playwright: {
-      url: 'http://127.0.0.1:5500',
+      url: 'http://localhost:3000',
       show: false,
-      browser: 'chromium'
+      browser: 'chromium',
+      waitForNavigation: 'load',
+      trace: true
     }
+  },
 
+  plugins: {
+    screenshotOnFail: {
+      enabled: true
+    }
   },
 
   include: {
@@ -23,7 +29,5 @@ exports.config = {
     steps: ['./steps/home.steps.js']
   },
 
-  bootstrap: null,
-  mocha: {},
   name: 'mini-site-js'
 };

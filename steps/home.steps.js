@@ -8,7 +8,6 @@ When('preencho o campo de busca com {string}', (texto) => {
   homePage.preencherBusca(texto);
 });
 
-
 When('clico em pesquisar', () => {
   homePage.clickPesquisar();
 });
