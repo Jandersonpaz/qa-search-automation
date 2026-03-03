@@ -1,3 +1,4 @@
+const path = require('path');
 exports.config = {
 
   tests: './features/*.feature',
@@ -5,7 +6,7 @@ exports.config = {
 
   helpers: {
     Playwright: {
-      url: 'http://localhost:3000',
+      url: `file://${path.resolve('./app')}/`,
       show: false,
       browser: 'chromium',
       waitForNavigation: 'load',
@@ -21,12 +22,12 @@ exports.config = {
 
   include: {
     I: './steps_file.js',
-    homePage: './pages/home.page.js'
+    login_page: './pages/login_page.js'
   },
 
   gherkin: {
     features: './features/*.feature',
-    steps: ['./steps/home.steps.js']
+    steps: ['./steps/login.steps.js']
   },
 
   name: 'mini-site-js'
