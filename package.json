@@ -1,7 +1,11 @@
 {
   "name": "mini-site-js",
   "version": "1.0.0",
-  "scripts": {},
+  "scripts": {
+    "test": "codeceptjs run --steps",
+    "test:headless": "codeceptjs run",
+    "test:debug": "codeceptjs run --debug"
+  },
   "devDependencies": {
     "codeceptjs": "^3.5.0",
     "playwright": "^1.40.0"
